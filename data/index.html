@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="icon" type="png" href="MisterShifterRED.png">
+ <meta charset="utf-8">
+ <title>
+	MisterShifter Settings
+ </title>
+ 
+
+</head>
+<script>
+    function submitMessage() {
+      setTimeout(function(){ document.location.reload(false); }, 500);   
+    }
+</script>
+
+<body>
+<header class="head"><img src="MisterShifterRED.png" alt="" width="131" height="131" style=""/></header>
+<main>
+<table width="361" height="302" border="0" align="center">
+  <tbody>
+    <tr><form action="/get" target="hidden-form">
+      <th width="110" scope="col">Shift Time</th>
+      <th width="144" scope="col"><input name="cutoff" type="number" value=%cutoff%></th>
+      <th width="93" scope="col"><input type="submit" formtarget="_parent" onClick="submitMessage()" value="Submit"></th>
+	</form>
+    </tr>
+    <tr><form action="/get" target="hidden-form">
+      <th scope="row">Pitlane</th>
+      <td style="text-align: center"><input name="pitlane" type="number" value=%pitlane%></td>
+      <td style="text-align: center"><input type="submit" formtarget="_parent" onClick="submitMessage()" value="Submit"></td>
+		</form>
+    </tr>
+    <tr><form action="/get" target="hidden-form">
+      <th scope="row">Delay of speed pitlane</th>
+      <td style="text-align: center"><input name="delay" type="number" value=%delay%></td>
+      <td style="text-align: center"> <input type="submit" formtarget="_parent" onClick="submitMessage()" value="Submit"></td>
+		</form>
+    </tr>
+    <tr><form action="/get" target="hidden-form">
+      <th style="text-align: center" scope="row">TPS</th>
+      <td style="text-align: center"><input name="tps" type="number" value=%tps%></td>
+      <td style="text-align: center"><input type="submit" formtarget="_parent" onClick="submitMessage()" value="Submit"></td>
+	</form>
+    </tr>
+    <tr>
+      <th style="text-align: center" scope="row">Throtle Position</th>
+      <th colspan="2" style="text-align: center" scope="row" id:"tpp" >%Tpp%</th>
+      </tr>
+  </tbody>
+</table>
+<form action="/update">
+      <input type="submit" value="update" />
+  </form>
+</main>
+</body>
+</html>
