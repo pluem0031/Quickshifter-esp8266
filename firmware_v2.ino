@@ -25,15 +25,11 @@ float th;
 const char* ssid_ap = "MisterShifter";
 const char* password_ap = "123456789";
 
-const char* ssid_sta = "HK_injection";
-const char* password_sta = "1212312121";
-
 const char* kill = "cutoff";
 const char* pit = "pitlane";
 const char* TP = "tps"; 
 const char* late = "delay"; 
-const char* wifi_sta = "wifi_sta"; 
-const char* pass_sta = "pass_sta"; 
+
 
 void notFound(AsyncWebServerRequest *request) {
   request->send(404, "text/plain", "Not found");
